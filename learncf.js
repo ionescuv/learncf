@@ -9,7 +9,8 @@ const learncf = require('workshopper-adventure')({
 })
 
 learncf.addAll([
-  'HELLO WORLD'
+  'Getting Started',
+  'Push your first app'
 ])
 
 module.exports = learncf
