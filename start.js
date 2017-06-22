@@ -1,0 +1,1 @@
+require('./learncf').execute(process.argv.slice(2))
