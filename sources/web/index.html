@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<title>.msg Kitchen</title>
+
+<script id='sap-ui-bootstrap'
+    src='https://sapui5.hana.ondemand.com/resources/sap-ui-core.js'
+    data-sap-ui-theme='sap_belize'
+    data-sap-ui-libs='sap.m'
+    data-sap-ui-compatVersion='edge'
+    data-sap-ui-preload='async'>
+</script>
+
+<script>
+
+	 // retrieve Data
+	 function getData() {
+		
+		var oModel = new sap.ui.model.json.JSONModel();
+		
+		$.ajax({
+			url: "/backingservice/meal",
+			type: 'GET',			
+			success: (response) => { // in case of success, set data to the JSON model
+							console.log("response:" + response);							
+							oModel.setData(response);							
+						} ,
+			error: (response) => { // in case of error, set mock data to the JSON model
+								console.log("error response:" + response);							
+								oModel.setData(
+									[
+										{
+											name: "French Fries",
+											status: "requested",
+											chef: "N/A"
+										},
+										{
+											name: "Curry Chicken",
+											status: "ready",
+											chef: "chef Tony"
+										}
+									]
+								);							
+						},
+		});
+		sap.ui.getCore().setModel(oModel);
+	 }
+	 
+     sap.ui.getCore().attachInit(function () {
+			getData();
+
+			var app = new sap.m.App().addPage( 
+				new sap.m.Page("page1", {
+					title : ".msg Kitchen",
+					showNavButton : false,
+					content : [
+						new sap.m.Input({
+							id: "mealName"
+						}),
+						new sap.m.Button({
+							text : "Order new meal",
+							press : function () {								
+								$.ajax({
+									url: "/backingservice/meal",
+									contentType: 'application/json',
+									data: JSON.stringify([{
+										name: sap.ui.getCore().byId("mealName").getValue()
+									}]),
+									dataType: 'json',
+									type: 'POST',			
+									success: (response) => { 
+													sap.m.MessageToast.show("New meals successfully ordered");						
+													getData();
+												} ,
+									error: (response) => { 
+														sap.m.MessageToast.show("Something went wrong");						
+												},
+								});								
+							}
+						}),
+						new sap.m.Table({
+							columns: [
+									new sap.m.Column({
+											  header:[
+													  new sap.m.Label({
+													  text:"Meal"
+													  })
+													  ]
+											  }),
+									new sap.m.Column({
+											  header:[
+													  new sap.m.Label({
+													  text:"Status"
+													  })
+													  ]
+											  }),
+								  new sap.m.Column({
+											  header:[
+													  new sap.m.Label({
+													  text:"Chef"
+													  })
+													  ]
+											  })										 
+									],
+							items:{
+									path: "/",         
+									template: new sap.m.ColumnListItem({
+									  cells:[             
+										   new sap.m.Text({
+										   text:"{name}"
+											}),
+											new sap.m.Text({
+											text:"{status}"
+											}),
+											new sap.m.Text({
+											text:"{chef}"
+											})
+										 ]
+									  })
+									}
+						})
+					]				
+				})
+			).placeAt("content");
+		});
+</script>
+
+</head>
+<body class='sapUiBody'>
+    <div id='content'></div>
+</body>
+</html>

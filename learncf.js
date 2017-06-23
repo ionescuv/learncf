@@ -9,8 +9,13 @@ const learncf = require('workshopper-adventure')({
 })
 
 learncf.addAll([
-  'Getting Started',
-  'Push your first app'
+  '1 Getting Started',
+  '2 Push your first app',
+  '3 The backing service',
+  '4 Deploy the frontend',
+  '5 Connect the two',
+  '6 Get the chef running',
+  '7 Scale up, we need more chefs'
 ])
 
 module.exports = learncf

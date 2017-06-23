@@ -10,4 +10,4 @@ Let's push our first app to CloudFoundry. The application will be a static html 
 
 ## HINTS
 
-Due to the existence of the `index.html` file, CloudFoundry should automatically infer that a staticfile buildpack is required. As a result a new container will be created, running an instance of the NGINX web server, which will serve out our `index.html` file.
+Due to the existence of the `index.html` file, CloudFoundry will automatically infer that a staticfile buildpack is required. As a result a new container will be created, running an NGINX web server, which will serve out our `index.html` file.
