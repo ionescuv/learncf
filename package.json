@@ -2,10 +2,10 @@
   "name": "learncf",
   "version": "0.0.1",
   "description": "Cloud Foundry workshop",
-  "main": "learncf.js",
+  "main": "learncf_wshop.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node start.js"
+    "start": "node ./bin/start.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,6 @@
     "workshopper-exercise": "^3.0.1"
   },
   "bin": {
-    "learncf": "./start.js"
+    "learncf": "./bin/start.js"
   }
 }
