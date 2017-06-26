@@ -9,7 +9,7 @@ In this exercise you will use the CF CLI to connect to your CloudFoundry account
 set http_proxy=<host:port>
 set https_proxy=<host:port>
 ```
-
+* Throughout this workshop we are not focusing on implementation, but on understanding the underlying cloud concepts and how they are implemented using CloudFoundry. As a result sources for the applications are made available at https://github.com/ionescuv/learncf/tree/master/sources
 
 ## STEPS
 
