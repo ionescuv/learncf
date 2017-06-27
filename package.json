@@ -19,7 +19,7 @@
   "homepage": "https://github.com/ionescuv/learncf#readme",
   "dependencies": {
     "workshopper": "^2.7.0",
-    "workshopper-adventure": "^6.0.2",
+    "workshopper-adventure": "ionescuv/workshopper-adventure",
     "workshopper-exercise": "^3.0.1"
   },
   "bin": {
