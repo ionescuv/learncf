@@ -13,6 +13,6 @@ exercise.addProcessor((mode, callback) => {
     callback(null, true);
 })
 
-exercise.solution = [line(), " < No solution file needed >\nHehe" , "nr 2", line()];
+exercise.solution = [line(), " cf push -f backend_manifest.yml ", line()];
 
 module.exports = exercise

@@ -1,16 +1,18 @@
-
+const chalk    = require('chalk')
 var exercise = require('workshopper-exercise')()
-var filecheck = require('workshopper-exercise/filecheck')
-var execute = require('workshopper-exercise/execute')
-var comparestdout = require('workshopper-exercise/comparestdout')
 
-// checks that the submission file actually exists
-exercise = filecheck(exercise)
+function repeat (ch, sz) {
+    return new Array(sz + 1).join(ch)
+}
 
-// execute the solution and submission in parallel with spawn()
-exercise = execute(exercise)
+function line() {
+    return '\n' + chalk.yellow(repeat('\u2500', 60)) + '\n\n'
+}
 
-// compare stdout of solution and submission
-exercise = comparestdout(exercise)
+exercise.addProcessor((mode, callback) => {
+    callback(null, true);
+})
+
+exercise.solution = [line(), " cf push web -b staticfile_buildpack -m 128M --random_route ", line()];
 
 module.exports = exercise
