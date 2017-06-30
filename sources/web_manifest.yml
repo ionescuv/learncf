@@ -2,7 +2,6 @@
 applications:
 - name: web
   memory: 128M
-  command: node index.js
   instances: 1
   random-route: true
   buildpack: staticfile_buildpack

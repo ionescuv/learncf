@@ -6,3 +6,5 @@ applications:
   instances: 1
   no-route: true
   path: ./worker
+  services:
+  - backingsrv
