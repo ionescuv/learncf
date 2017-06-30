@@ -13,6 +13,6 @@ exercise.addProcessor((mode, callback) => {
     callback(null, true);
 })
 
-exercise.solution = [line(), ' cf create-user-provided-service rest_backend -p "url" ', ' cf bind-service web rest_backend ' ,' cf restart web ' , line()];
+exercise.solution = [line(), ' cf push -f worker_manifest.yml --no-start ', ' cf bind-service worker rest_backend ' ,' cf start worker ' , line()];
 
 module.exports = exercise

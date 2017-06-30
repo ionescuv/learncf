@@ -13,6 +13,6 @@ exercise.addProcessor((mode, callback) => {
     callback(null, true);
 })
 
-exercise.solution = [line(), ' cf create-user-provided-service rest_backend -p "url" ', ' cf bind-service web rest_backend ' ,' cf restart web ' , line()];
+exercise.solution = [line(), ' cf scale worker -i 3 ', line()];
 
 module.exports = exercise

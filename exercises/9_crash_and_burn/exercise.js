@@ -13,6 +13,6 @@ exercise.addProcessor((mode, callback) => {
     callback(null, true);
 })
 
-exercise.solution = [line(), ' cf create-user-provided-service rest_backend -p "url" ', ' cf bind-service web rest_backend ' ,' cf restart web ' , line()];
+exercise.solution = [line(), ' In order to build a fault-tolerant system, it is mandatory to use stateless processes. Furthermore apps should have a quick start-up time to assure a smooth recovery ', line()];
 
 module.exports = exercise

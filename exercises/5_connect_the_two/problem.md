@@ -1,7 +1,7 @@
 Frontend and backing service are now two independent processes running in separate containers. In this step we will configure the connection between the two(a.k.a. the `service binding`). This is achieved by configuring the NGINX web server to forward requests coming from the UI5 frontend to the URL of the backing service.
 
 ## BEFORE YOU START
-Before continuing make sure you understand how the forwarding of requests by the NGINX server has been implemented. Check out the implementation and configuration of the `web` app. Hint: the URL for which requests are being forwarded is `<webapp-URL>/backingservice`. Search for it.
+Before continuing make sure you understand how the forwarding of requests by the NGINX server has been implemented. Check out the implementation (`index.html`) and configuration(`nginx.conf`) of the `web` app. Hint: the URL for which requests are being forwarded is `<webapp-URL>/backingservice`. Search for it.
 
 ----------------------------------------------------------------------
 
