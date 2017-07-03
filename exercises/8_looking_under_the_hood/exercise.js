@@ -13,6 +13,6 @@ exercise.addProcessor((mode, callback) => {
     callback(null, true);
 })
 
-exercise.solution = [line(), ' cf scale worker -i 3 ', line()];
+exercise.solution = [line(), ' cf cups -l logdrain <endpoint> ', line()];
 
 module.exports = exercise
