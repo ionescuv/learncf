@@ -11,4 +11,4 @@ The frontend attemtps to connect to the REST backend (backing service) in order 
 
 ## HINTS
 
-When running in the cloud, the 2 components (web frontend and rest backend) are running in different containers. As a result it will be necessary to bind them together.  We will do that in the next exercise.  by setting some environment variables of the NGINX server. (see `nginx.conf` if you to see how this is achieved)
+When running in the cloud, the 2 components (web frontend and rest backend) are running in different containers. As a result it will be necessary to bind them together.  We will do that in the next exercise. 

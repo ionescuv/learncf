@@ -1,7 +1,7 @@
-Frontend and backing service are now two independent processes running in separate containers. In this step we will configure the connection between the two(a.k.a. the `service binding`). This is achieved by configuring the NGINX web server to forward requests coming from the UI5 frontend to the URL of the backing service.
+Frontend and backing service are now two independent processes running in separate containers. In this step we will configure the connection between the two(a.k.a. the `service binding`). This is achieved by configuring the NGINX web server to forward requests coming from the UI5 frontend to the URL of the backing service (like a `reverse proxy`).
 
 ## BEFORE YOU START
-Before continuing make sure you understand how the forwarding of requests by the NGINX server has been implemented. Check out the implementation (`index.html`) and configuration(`nginx.conf`) of the `web` app. Hint: the URL for which requests are being forwarded is `<webapp-URL>/backingservice`. Search for it.
+Before continuing have a look at how the forwarding of requests by the NGINX server has been implemented. Check out the implementation (`index.html`) and configuration(`nginx.conf`) of the `web` app. Hint: the URL for which requests are being forwarded is `<webapp-URL>/backingservice`. Search for it.
 
 ----------------------------------------------------------------------
 
@@ -15,4 +15,5 @@ url> ...
 ```
 * Now bind the `rest_backend` to the frontend app
 * Check the environment of the "web" app again
-* Now restart the frontend app and test it again
+* Now restart the frontend app and check the addres <FRONTEND_URL>/backingservice/meal. It should provide the same output like <BACKEND_URL>/meal
+* Test the frontend web page again. It should now work on real data from the backing service. Try creating some new meals.

@@ -9,6 +9,10 @@
   "author": "Victor Ionescu",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.5.0"
+    "async": "^2.5.0",
+    "cfenv": "^1.0.4",
+    "request": "^2.81.0",
+	"fs-sync": "^1.0.4",
+    "properties-parser": "^0.3.1"
   }
 }

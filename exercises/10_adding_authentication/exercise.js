@@ -13,6 +13,6 @@ exercise.addProcessor((mode, callback) => {
     callback(null, true);
 })
 
-exercise.solution = [line(), ' cf push -f worker_manifest.yml --no-start ', ' cf bind-service worker rest_backend ' ,' cf start worker -u none' , line()];
+exercise.solution = [line(), ' Implement an API Gateway pattern by using cf-guard-proxy in combination with the standard CF UAA. Register the guard-proxy as a route service on your domain ', line()];
 
 module.exports = exercise

@@ -39,5 +39,5 @@ Puts the chef to work. `<chefName>` cooks the first unprepared meal in the list
 
 * Instead of manually passing command-line arguments to the `cf push` instruction, manifest files can be used. Check out what options have been provided in `backend_manifest.yml`
 * Push the application to CloudFoundry using this manifest file
-* The application uses a random route. Copy the generated URL and verify the endpoints using a browser/postman
+* The application uses a random route. Copy the generated URL and verify the endpoints using a browser/postman: Create a new meal of your choice (POST) and check if you can then read it (GET)
 

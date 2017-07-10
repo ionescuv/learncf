@@ -17,7 +17,8 @@ learncf.addAll([
   '6 Get the chef running',
   '7 We need more chefs',
   '8 Looking under the hood',
-  '9 Crash and Burn'
+  '9 Crash and Burn',
+  '10 Adding Authentication'
 ])
 
 module.exports = learncf

@@ -13,6 +13,6 @@ exercise.addProcessor((mode, callback) => {
     callback(null, true);
 })
 
-exercise.solution = [line(), ' cf cups -l logdrain <endpoint> ', line()];
+exercise.solution = [line(), ' cf cups -l <logdrain> <Papertrail endpoint URL> ', ' cf bind-service <app> <logdrain> ' , line()];
 
 module.exports = exercise
