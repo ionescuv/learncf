@@ -8,7 +8,8 @@ Before continuing have a look at how the forwarding of requests by the NGINX ser
 ## STEPS
 
 * The binding of the backingservice to the frontend is achieved solely through environment configuration. Start by checking out the environment data of the "web" app: `cf env web`
-* Define a new `user-provided-service` (call it `backend`) pointing to the URL of the backend service (set the URL as an attribute of the service named 'url')
+* Define a new `user-provided-service` (make sure to call it `backend`)
+* The user-provided-service must point to the URL of the backend service: define an attribute of the service named 'url', as described below:
 ```
 cf create-user-provided-service rest_backend -p "url"
 url> https:// < url of your backing service >  /

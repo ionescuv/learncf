@@ -26,7 +26,7 @@ set https_proxy=<host:port>
 
 ## STEPS
 
-* Use CF TARGET to set the API endpoint of your cloud foundry provider. For the SAP Cloud Platform, this is https://api.cf.us10.hana.ondemand.com
+* Use CF TARGET to set the API endpoint of your cloud foundry provider. For the SAP Cloud Platform, this is https://api.cf.eu10.hana.ondemand.com
 * LOGIN to your account
 * Target an ORG and a SPACE in your cloud foundry installation. These are logical separations which can be used to group together applications based on various criteria
 * Check to see if you have any apps running in your account
