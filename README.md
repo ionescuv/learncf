@@ -1,5 +1,5 @@
 # learncf
-Exercises for taking your first steps with CloudFoundry.
+Exercises for taking your first steps with CloudFoundry .
 
 This is a workshop-style node module based on [Workshopper-Adventure](https://github.com/workshopper/workshopper-adventure)
 
